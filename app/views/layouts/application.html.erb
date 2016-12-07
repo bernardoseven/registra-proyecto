@@ -7,7 +7,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<% if logged_in? %>
+<h3>Usuario Logueado Actual:</h3>
+<%= current_user.name %>
+<h3>Email:</h3>
+<%= current_user.email %>
+<h3>Rol:</h3>
+<%= current_user.role %>
+<p>
+          <%= link_to "Cerrar Sesión", logout_path, method: "delete" %>
+        </p>
+<% else %>
+<%= link_to "Ingresar", login_path %>
+<% end %>
 <%= yield %>
 
 </body>

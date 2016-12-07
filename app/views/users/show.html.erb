@@ -1,0 +1,21 @@
+<h1>Nompre</h1>
+<%= @user.name %>
+<br />
+<h1>Email</h1>
+<%= @user.email %>
+<br/>
+<h2>Crear Proyectos</h2>
+<%= render 'proyects/form' %>
+<br />
+<div>
+	<% @proyects.each do |p| %>
+	<p>
+	<h4>Nombre Proyecto</h4>
+	<%= p.name %>
+    </p>
+    <p>
+    <h4>Descripción Proyecto</h4>
+	<%= p.desc %>
+    </p>
+	<% end %>
+</div>

@@ -1,0 +1,19 @@
+<%= form_for([@user, @user.proyects.build]) do |f| %>
+
+<div class="row">
+  <p>
+    <%= f.label :Nombre %> <br/>
+    <%= f.text_area :name %><br>
+  </p>
+</div>
+</div class="row">
+  <p>
+    <%= f.label :Descripción %><br>
+    <%= f.text_area :desc %><br/>
+  </p>
+</div>
+  <p>
+    <br/>
+    <%= f.submit "Publicar Proyecto", class: "btn btn-primary" %>
+  </p>
+<% end %>

@@ -11,7 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161207203640) do
+ActiveRecord::Schema.define(version: 20161207210933) do
+
+  create_table "proyects", force: :cascade do |t|
+    t.string   "name"
+    t.text     "desc"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "proyects", ["user_id"], name: "index_proyects_on_user_id"
+
+  create_table "registers", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "proyect_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "registers", ["proyect_id"], name: "index_registers_on_proyect_id"
+  add_index "registers", ["user_id"], name: "index_registers_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
@@ -19,6 +39,7 @@ ActiveRecord::Schema.define(version: 20161207203640) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.string   "password_digest"
+    t.string   "role"
   end
 
 end

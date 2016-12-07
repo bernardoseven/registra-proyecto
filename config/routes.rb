@@ -13,4 +13,7 @@ Rails.application.routes.draw do
     resources :proyects
   end
 
+  get 'proyect/:id' => 'proyects#show', as: 'proyect'
+  post 'proyect' => 'proyects#create'
+
 end

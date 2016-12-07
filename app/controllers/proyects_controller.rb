@@ -4,6 +4,10 @@ class ProyectsController < ApplicationController
   	@proyects = Proyect.all
   end
 
+  def show
+    @proyect = Proyect.find(params[:id])
+  end
+
   def new
   	@proyect = Proyect.new
   end

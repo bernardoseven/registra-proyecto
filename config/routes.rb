@@ -14,6 +14,6 @@ Rails.application.routes.draw do
   end
 
   get 'proyect/:id' => 'proyects#show', as: 'proyect'
-  post 'proyect' => 'proyects#create'
+  post 'proyect/:id' => 'registers#create'
 
 end

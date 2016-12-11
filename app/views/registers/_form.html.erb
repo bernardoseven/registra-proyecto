@@ -1,5 +1,5 @@
 <%= form_for(:register) do |r| %>
-<%= r.number_field :proyect_id, value: @proyect.id %>
-<%= r.number_field :user_id, value: current_user.id %>
+<%= r.hidden_field :proyect_id, value: @proyect.id %>
+<%= r.hidden_field :user_id, value: current_user.id %>
 <%= r.submit "Registrame", class: "btn btn-primary" %>
 <% end %>

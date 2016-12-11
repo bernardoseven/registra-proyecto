@@ -2,6 +2,7 @@ class ProyectsController < ApplicationController
   
   def index
   	@proyects = Proyect.all
+    # Retrieve all the proyects where the current_user is registered
   end
 
   def show

@@ -2,9 +2,8 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(params[:id])
+    @a_proyects = @user.a_proyects.distinct
     @proyects = @user.proyects.distinct
-    # proyecto/s donde el usuario est'a registrado
-    @proyect = @user.registers.first.proyect
   end
 
   def new

@@ -15,7 +15,7 @@ class ProyectsController < ApplicationController
 
   def create
   	@user = User.find(params[:user_id])
-    @proyect = @user.proyects.create(proyect_params)
+    @a_proyect = @user.a_proyects.create(proyect_params)
     redirect_to user_path(@user)
   end
 

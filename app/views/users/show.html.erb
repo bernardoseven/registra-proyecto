@@ -8,7 +8,8 @@
 <%= render 'proyects/form' %>
 <br />
 <div>
-	<% @proyects.each do |p| %>
+	<h3>Mis proyectos</h3>
+	<% @a_proyects.each do |p| %>
 	<p>
 	<h4>Nombre Proyecto</h4>
 	<%= p.name %>
@@ -21,12 +22,8 @@
 </div>
 <div>
 	<h3>Estoy Registrado en este/estos Proyecto/s</h3>
-	<%#= @pron %>
-	<%#= @@.desc %>
-	<%# @proyects.each do |p| %>
-	<%#= @p.name %>
-	<%#= @p.desc %>
-	<%# end %>
-	<%= @proyect.name %>
-	<%= @proyect.desc %>
+	<% @proyects.each do |p| %>
+	<%= p.name %>
+	<%= p.desc %>
+	<% end %>
 </div>

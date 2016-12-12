@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
 
   resources :users do
+    resources :a_proyects
     resources :proyects
   end
 
